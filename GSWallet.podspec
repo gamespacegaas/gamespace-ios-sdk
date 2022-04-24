@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
         LICENSE
       }
     s.author              = { "Game Space" => "developer@game.space" }
-    s.platform            = :ios, '8.0'
+    s.platform            = :ios, '9.0'
     s.source              = { :git => "https://github.com/gamespacegaas/gamespace-ios-sdk.git", :tag => s.version.to_s }
     s.source_files        = 'GSWallet.framework/Versions/A/Headers/*.h'
     s.vendored_frameworks = 'GSWallet.framework'

@@ -4,7 +4,7 @@ This library allows you to integrate Game Space Platform into your iOS apps. Lea
 
 ## Requirements
 
-iOS 8.0 and above.
+iOS 9.0 and above.
 
 ## Installation
 
