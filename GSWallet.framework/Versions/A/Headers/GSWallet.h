@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)registerApp:(NSString *)appId;
 
++ (void)registerApp:(NSString *)appId channel:(nullable NSString *)channel;
+
 + (BOOL)handleOpenURL:(NSURL *)url delegate:(id<GSWalletDelegate>)delegate;
 
 + (BOOL)isAppInstalled;
