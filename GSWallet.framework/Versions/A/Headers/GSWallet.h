@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <GSWallet/GSWalletObject.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -14,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)registerApp:(NSString *)appId;
 
++ (void)registerApp:(NSString *)appId network:(GSWNetwork)network;
+
 + (void)registerApp:(NSString *)appId channel:(nullable NSString *)channel;
+
++ (void)registerApp:(NSString *)appId channel:(nullable NSString *)channel network:(GSWNetwork)network;
 
 + (BOOL)handleOpenURL:(NSURL *)url delegate:(id<GSWalletDelegate>)delegate;
 
@@ -29,6 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getVersion;
 
 + (void)enableDebug:(BOOL)enabled;
+
++ (void)openWallet:(NSDictionary *)options
+              from:(UIViewController *)viewController
+          delegate:(id<GSWalletDelegate>)delegate;
+
++ (void)closeWallet;
 
 @end
 

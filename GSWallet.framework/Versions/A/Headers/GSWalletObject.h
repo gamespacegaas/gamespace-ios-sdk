@@ -6,8 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+UIKIT_EXTERN NSString * const GSWOptionsTheme;
+UIKIT_EXTERN NSString * const GSWOptionsOrientation;
+UIKIT_EXTERN NSString * const GSWOptionsLanguage;
+UIKIT_EXTERN NSString * const GSWOptionsPath;
+UIKIT_EXTERN NSString * const GSWOriginationPortrait;
+UIKIT_EXTERN NSString * const GSWOriginationLandscape;
+UIKIT_EXTERN NSString * const GSWThemeDark;
+UIKIT_EXTERN NSString * const GSWThemeLight;
 
 typedef enum
 {
@@ -35,6 +45,12 @@ typedef enum
     GSWResponseTypePay,
     GSWResponseTypeOpenWebView
 } GSWResponseType;
+
+typedef enum
+{
+    GSWNetworkTestnet           = 1,
+    GSWNetworkMainnet
+} GSWNetwork;
 
 @interface GSBaseRequest : NSObject
 
@@ -105,6 +121,14 @@ typedef enum
 @optional
 
 - (void)onWalletResponse:(GSBaseResponse *)response;
+
+- (void)onWalletClose;
+
+- (void)onWalletLogout;
+
+- (GSAuthRequest *)createAuthRequest;
+
+- (GSPayRequest *)createPayRequest:(NSArray *)tokenIds;
 
 @end
 
