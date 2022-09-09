@@ -39,6 +39,12 @@ NS_ASSUME_NONNULL_BEGIN
               from:(UIViewController *)viewController
           delegate:(id<GSWalletDelegate>)delegate;
 
++ (void)openWallet:(NSDictionary *)options
+              from:(UIViewController *)viewController
+           request:(GSBaseRequest *)request
+          delegate:(id<GSWalletDelegate>)delegate
+        completion:(void (^ __nullable)(NSError *error))completion;
+
 + (void)closeWallet;
 
 @end
