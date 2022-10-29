@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "GSWallet"
-    s.version      = "1.2.2"
+    s.version      = "1.2.3"
     s.summary      = "Used to integrate the Game Space Platform with your iOS apps. Learn more at https://game.space."
     s.homepage     = "https://game.space"
     s.license      = {
